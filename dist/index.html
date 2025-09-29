@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Video Site — Home</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="An ad-free, stress-free video platform with randomized discovery and simple subscriptions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-DuRoJXJO.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BoCvXBrO.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header" data-js="site-header">
+    <div class="header__inner container">
+     <a class="header__brand" href="./">Video Site</a>
+      <nav class="header__menu" aria-label="Primary">
+        <a href="./" data-nav="home">Home</a>
+        <a href="channel" data-nav="channel">Channel</a>
+        <a href="account" data-nav="account">Account</a>
+        <a href="about" data-nav="about">About</a>
+      </nav>
+
+      <div class="header__actions">
+        <form class="search" role="search" aria-label="Site search" data-js="site-search-form">
+          <span class="search__icon" aria-hidden="true">🔎</span>
+          <label class="visually-hidden" for="site-search">Search videos</label>
+          <input id="site-search" name="q" type="search" placeholder="Search titles, creators, tags…" autocomplete="off" />
+        </form>
+        <button class="header__toggle" type="button" data-js="nav-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container section stack">
+    <h1>Discover</h1>
+
+    <div class="cluster" role="toolbar" aria-label="Feed filters">
+      <button class="chip is-active" data-mode="random" aria-pressed="true">Random</button>
+      <button class="chip" data-mode="chronological" aria-pressed="false">Chronological</button>
+      <button class="chip" data-mode="subscriptions" aria-pressed="false">Subscriptions</button>
+    </div>
+
+    <section aria-labelledby="feed-heading" class="stack">
+      <h2 id="feed-heading" class="visually-hidden">Feed</h2>
+      <div class="grid cols-3" id="feed-grid"><!-- cards injected here --></div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <small>&copy; 2025 Studio Teknabu • <a href="privacy">Privacy</a> • <a href="terms">Terms</a></small>
+  </footer>
+
+  <!-- Scripts: load once, with relative paths -->
+</body>
+</html>

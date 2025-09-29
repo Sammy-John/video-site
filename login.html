@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Sign In — Video Site</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Sign in or create an account." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles/base.css" />
+  <link rel="stylesheet" href="src/styles/components.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header" data-js="site-header">
+    <div class="header__inner container">
+      <a class="header__brand" href="./">Video Site</a>
+
+      <nav class="header__menu" aria-label="Primary">
+        <a href="./" data-nav="home">Home</a>
+        <a href="channel" data-nav="channel">Channel</a>
+        <a href="account" data-nav="account">Account</a>
+        <a href="about" data-nav="about">About</a>
+      </nav>
+
+      <div class="header__actions">
+        <form class="search" role="search" aria-label="Site search" data-js="site-search-form">
+          <span class="search__icon" aria-hidden="true">🔎</span>
+          <label class="visually-hidden" for="site-search">Search videos</label>
+          <input id="site-search" name="q" type="search" placeholder="Search titles, creators, tags…" autocomplete="off" />
+        </form>
+        <button class="header__toggle" type="button" data-js="nav-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container section grid cols-2">
+    <section class="card stack">
+      <h1>Sign in</h1>
+      <form id="loginForm" class="stack" autocomplete="on" novalidate>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" inputmode="email" autocomplete="username"
+               autocapitalize="none" spellcheck="false" required placeholder="you@example.com" />
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required />
+
+        <button class="btn" type="submit">Sign in</button>
+      </form>
+      <p class="text-sm">No account? <a href="#signup" id="signupLink">Create one</a></p>
+    </section>
+
+    <section id="signup" class="card stack">
+      <h2>Create account</h2>
+      <form id="signupForm" class="stack" autocomplete="on" novalidate>
+        <label for="name">Display name</label>
+        <input id="name" name="name" autocomplete="name" required />
+
+        <label for="email2">Email</label>
+        <input id="email2" name="email" type="email" inputmode="email" autocomplete="email"
+               autocapitalize="none" spellcheck="false" required />
+
+        <label for="password2">Password</label>
+        <input id="password2" name="password" type="password" autocomplete="new-password" required />
+
+        <button class="btn" type="submit">Create account</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <small>&copy; 2025 Studio Teknabu • <a href="privacy">Privacy</a> • <a href="terms">Terms</a></small>
+  </footer>
+
+  <script type="module" src="src/js/app.js"></script>
+  <!-- Add auth script later when implemented -->
+  <!-- <script type="module" src="src/js/auth.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,62 @@
+name: "🐞 Bug Report"
+description: Report a reproducible problem
+title: "[Bug]: "
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for filing a bug! Fill out the details below."
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: Short, clear description
+      placeholder: "Mini-player closes when scrolling"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Exact steps, starting URL
+      placeholder: |
+        1. Open /
+        2. Start playing a video
+        3. Scroll the feed
+        4. Observe mini-player
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs Actual
+      placeholder: |
+        Expected: mini-player stays pinned
+        Actual: mini-player disappears
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options: ["critical", "high", "medium", "low"]
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "Windows 11 / Firefox 143, Node 20.12.2, npm 10.5.0"
+  - type: checkboxes
+    id: areas
+    attributes:
+      label: Areas affected
+      options:
+        - label: Accessibility (a11y)
+        - label: Performance regression
+        - label: Security concern
+        - label: Content/Copy
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots / Logs / Links
+      placeholder: "Drag images or paste links here"

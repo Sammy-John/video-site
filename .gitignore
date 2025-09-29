@@ -1,0 +1,75 @@
+# ----------------------------
+# Node / package managers
+# ----------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Keep your lockfile! (important for reproducible installs)
+# (Do NOT ignore package-lock.json / pnpm-lock.yaml / yarn.lock)
+
+# ----------------------------
+# Vite / build output
+# ----------------------------
+dist/
+dist-ssr/
+.vite/
+node_modules/.vite/
+
+# ----------------------------
+# Environment / secrets
+# ----------------------------
+.env
+.env.*.local
+.env.local
+# Keep examples for docs
+!.env.example
+
+# ----------------------------
+# Caches & misc
+# ----------------------------
+.cache/
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+
+# ----------------------------
+# Tests / coverage (if added later)
+# ----------------------------
+coverage/
+.vitest/
+jest-cache/
+playwright-report/
+test-results/
+
+# ----------------------------
+# Editors / OS files
+# ----------------------------
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ----------------------------
+# Hosting / CI
+# ----------------------------
+.netlify/
+
+# ----------------------------
+# Media: ignore large video binaries in repo
+# Keep placeholder files to preserve folder structure
+# ----------------------------
+public/media/**
+!public/media/.gitkeep
+!public/media/README.md
+
+# Optional local scratch
+public/tmp/
+tmp/

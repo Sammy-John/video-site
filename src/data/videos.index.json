@@ -1,0 +1,25 @@
+[
+  {
+    "id": "abc123",
+    "title": "Clay Animation: Dawn",
+    "creatorId": "maker01",
+    "creatorName": "Maker One",
+    "category": "Animation",
+    "tags": ["stopmotion","clay"],
+    "src": "/media/solo-schedule.mp4",
+    "thumbnail": "/thumbs/abc123.jpg",
+    "captions": "/captions/abc123.vtt",
+    "uploadedAt": "2025-09-28"
+  },
+  {
+    "id": "xyz555",
+    "title": "Analog Synth Jam",
+    "creatorId": "synth99",
+    "creatorName": "Echo Twin",
+    "category": "Music",
+    "tags": ["synth","ambient"],
+    "src": "/media/solo-schedule.mp4",
+    "thumbnail": "/thumbs/xyz555.jpg",
+    "uploadedAt": "2025-09-20"
+  }
+]

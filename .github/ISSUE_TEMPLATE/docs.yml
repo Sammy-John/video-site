@@ -1,0 +1,23 @@
+name: "📝 Docs Update"
+description: Improve or add documentation
+title: "[Docs]: "
+labels: ["documentation"]
+assignees: []
+body:
+  - type: textarea
+    id: scope
+    attributes:
+      label: What needs documenting?
+      placeholder: "Add README section for video sitemap"
+    validations:
+      required: true
+  - type: textarea
+    id: pages
+    attributes:
+      label: Files / Pages to change
+      placeholder: "README.md, /docs/sitemaps.md"
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      placeholder: "- Includes code snippet\n- Links to examples\n- Screenshots if UI"

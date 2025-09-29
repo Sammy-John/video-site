@@ -1,0 +1,38 @@
+name: "✨ Feature Request"
+description: Propose a new capability
+title: "[Feature]: "
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Opportunity
+      placeholder: "Users can’t find fresh content in a category quickly"
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      placeholder: "Add category quick-filters with keyboard shortcuts"
+    validations:
+      required: true
+  - type: textarea
+    id: value
+    attributes:
+      label: User Value / Goal
+      placeholder: "Faster discovery without algorithmic ranking"
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      placeholder: |
+        - Category chips focusable via Tab
+        - Enter toggles filter
+        - Works on mobile and desktop
+  - type: textarea
+    id: outofscope
+    attributes:
+      label: Out of Scope (explicitly not included)
+      placeholder: "No personalized ranking; no ads"

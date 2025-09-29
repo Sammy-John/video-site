@@ -1,0 +1,85 @@
+/* Header / Nav */
+.header {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+.header__inner {
+  display: grid; align-items: center;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--space-3);
+  padding-block: var(--space-4);
+}
+.header__brand { font-family: var(--font-heading); font-size: var(--step-2); font-weight: 700; }
+.header__menu {
+  display: flex; gap: var(--space-3); justify-content: center;
+}
+.header__menu a {
+  padding: .5rem .75rem; border-radius: 10px; color: var(--fg);
+}
+.header__menu a[aria-current="page"] {
+  background: color-mix(in oklab, var(--accent) 12%, var(--surface));
+  border: 1px solid color-mix(in oklab, var(--accent) 35%, var(--border));
+}
+.header__actions {
+  display: flex; justify-content: end; align-items: center; gap: var(--space-3);
+}
+.header__toggle {
+  display: none;
+  border: 1px solid var(--border); background: var(--surface);
+  padding: .5rem .75rem; border-radius: 10px;
+}
+
+/* Mobile nav */
+@media (max-width: 820px) {
+  .header__inner { grid-template-columns: 1fr auto auto; }
+  .header__menu { display: none; }
+  .header__toggle { display: inline-flex; }
+  .header.is-open .header__menu {
+    display: flex; position: absolute; left: 0; right: 0; top: 100%;
+    background: var(--bg); border-bottom: 1px solid var(--border);
+    padding: var(--space-3); justify-content: center;
+  }
+}
+
+/* Search */
+.search {
+  position: relative; width: min(520px, 100%);
+}
+.search input[type="search"] {
+  padding-left: 2.25rem; /* space for icon */
+}
+.search__icon {
+  position: absolute; left: .6rem; top: 50%; translate: 0 -50%;
+  font-size: .95em; color: var(--muted);
+}
+
+/* Cards */
+.card.video {
+  padding: 0; overflow: hidden;
+}
+.video__thumb {
+  aspect-ratio: 16/9; display: block; width: 100%; object-fit: cover;
+  background: #000;
+}
+.video__meta { padding: var(--space-4); }
+.video__title {
+  font-family: var(--font-heading); font-size: var(--step-1); margin: 0 0 .25rem;
+}
+.video__creator { color: var(--muted); font-size: var(--step--1); margin: 0 0 .5rem; }
+.video__tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+.badge {
+  display: inline-flex; align-items: center; gap: .35em;
+  padding: .25rem .5rem; border-radius: 999px;
+  font-size: var(--step--1); border: 1px solid var(--border);
+  background: var(--surface); color: var(--fg);
+}
+.badge.cc { border-color: color-mix(in oklab, var(--accent) 40%, var(--border)); }
+
+/* Make entire card a focusable link */
+.video__link {
+  display: grid; text-decoration: none; color: inherit;
+}
+.video__link:focus-visible {
+  outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 12px;
+}

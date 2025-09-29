@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Watch — Video Site</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../src/styles/base.css" />
+  <link rel="stylesheet" href="../src/styles/components.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header" data-js="site-header">
+    <div class="header__inner container">
+      <a class="header__brand" href="/">Video Site</a>
+      <nav class="header__menu" aria-label="Primary">
+        <a href="/" data-nav="home">Home</a>
+        <a href="/channel" data-nav="channel">Channel</a>
+        <a href="/account" data-nav="account">Account</a>
+        <a href="/about" data-nav="about">About</a>
+      </nav>
+      <div class="header__actions">
+        <form class="search" role="search" aria-label="Site search" data-js="site-search-form">
+          <span class="search__icon" aria-hidden="true">🔎</span>
+          <label class="visually-hidden" for="site-search">Search videos</label>
+          <input id="site-search" name="q" type="search" placeholder="Search titles, creators, tags…" autocomplete="off" />
+        </form>
+        <button class="header__toggle" type="button" data-js="nav-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container section stack">
+    <nav aria-label="Breadcrumb" class="text-sm">
+      <a href="/">Home</a> / <span id="bc-creator">Creator</span> / <span id="bc-title">Title</span>
+    </nav>
+
+    <article class="stack">
+      <header class="stack">
+        <h1 id="video-title">Loading…</h1>
+        <p id="video-creator" class="text-sm"></p>
+      </header>
+
+      <video id="player" class="card" controls preload="metadata" playsinline>
+        <source id="player-src" src="" type="video/mp4">
+        <track id="player-vtt" kind="captions" srclang="en" label="English">
+        Sorry, your browser doesn’t support embedded videos.
+      </video>
+
+      <div class="cluster">
+        <a id="creator-link" class="btn secondary" href="/channel">View channel</a>
+        <a class="btn" href="/">Back to feed</a>
+      </div>
+    </article>
+
+    <section class="stack">
+      <h2>More from this creator</h2>
+      <div class="grid cols-3" id="more-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <small>&copy; 2025 Studio Teknabu • <a href="/privacy">Privacy</a> • <a href="/terms">Terms</a></small>
+  </footer>
+
+  <script type="module" src="../src/js/app.js"></script>
+  <script type="module" src="../src/js/video.js"></script>
+</body>
+</html>

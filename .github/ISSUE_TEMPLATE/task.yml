@@ -1,0 +1,31 @@
+name: "🧹 Task / Chore"
+description: Non-user-facing change (refactor, build, CI, etc.)
+title: "[Task]: "
+labels: ["chore"]
+assignees: []
+body:
+  - type: textarea
+    id: work
+    attributes:
+      label: Work to do
+      placeholder: "Refactor player.js into smaller modules"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps / Plan
+      placeholder: "- Extract controls.js\n- Extract captions.js\n- Update imports"
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of Done
+      placeholder: |
+        - Build + lint pass
+        - No change to public API
+        - Bundle size unchanged or smaller
+  - type: input
+    id: deps
+    attributes:
+      label: Dependencies / Linked issues
+      placeholder: "#23, #41"

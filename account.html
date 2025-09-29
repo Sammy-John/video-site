@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Account — Profile & Preferences</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Manage your profile and subscriptions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles/base.css" />
+  <link rel="stylesheet" href="src/styles/components.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header" data-js="site-header">
+    <div class="header__inner container">
+      <a class="header__brand" href="./">Video Site</a>
+
+      <nav class="header__menu" aria-label="Primary">
+        <a href="./" data-nav="home">Home</a>
+        <a href="channel" data-nav="channel">Channel</a>
+        <a href="account" data-nav="account">Account</a>
+        <a href="about" data-nav="about">About</a>
+      </nav>
+
+      <div class="header__actions">
+        <form class="search" role="search" aria-label="Site search" data-js="site-search-form">
+          <span class="search__icon" aria-hidden="true">🔎</span>
+          <label class="visually-hidden" for="site-search">Search videos</label>
+          <input id="site-search" name="q" type="search" placeholder="Search titles, creators, tags…" autocomplete="off" />
+        </form>
+        <button class="header__toggle" type="button" data-js="nav-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container section grid cols-2">
+    <section class="stack">
+      <h1 id="profile-heading">Profile</h1>
+      <form id="profileForm" class="stack" aria-labelledby="profile-heading" autocomplete="on">
+        <label for="displayName">Display name</label>
+        <input id="displayName" name="displayName" placeholder="Your name" />
+
+        <label for="bio">Bio</label>
+        <textarea id="bio" name="bio" rows="4" placeholder="Tell people what you make"></textarea>
+
+        <button class="btn" type="submit">Save changes</button>
+      </form>
+    </section>
+
+    <aside class="stack">
+      <h2>Subscriptions</h2>
+      <ul id="subsList" class="stack">
+        <!-- followed creators appear here -->
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="footer container">
+    <small>&copy; 2025 Studio Teknabu • <a href="privacy">Privacy</a> • <a href="terms">Terms</a></small>
+  </footer>
+
+  <script type="module" src="src/js/app.js"></script>
+  <script type="module" src="src/js/account.js"></script>
+</body>
+</html>

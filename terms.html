@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Terms of Service — Video Site</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Terms of Service." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles/base.css" />
+  <link rel="stylesheet" href="src/styles/components.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header" data-js="site-header">
+    <div class="header__inner container">
+      <a class="header__brand" href="./">Video Site</a>
+
+      <nav class="header__menu" aria-label="Primary">
+        <a href="./" data-nav="home">Home</a>
+        <a href="channel" data-nav="channel">Channel</a>
+        <a href="account" data-nav="account">Account</a>
+        <a href="about" data-nav="about">About</a>
+      </nav>
+
+      <div class="header__actions">
+        <form class="search" role="search" aria-label="Site search" data-js="site-search-form">
+          <span class="search__icon" aria-hidden="true">🔎</span>
+          <label class="visually-hidden" for="site-search">Search videos</label>
+          <input id="site-search" name="q" type="search" placeholder="Search titles, creators, tags…" autocomplete="off" />
+        </form>
+        <button class="header__toggle" type="button" data-js="nav-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container section stack">
+    <h1>Terms of Service</h1>
+
+    <section class="stack">
+      <h2>Use of the Service</h2>
+      <p>This is a demo/MVP. Do not upload copyrighted or harmful content.</p>
+    </section>
+
+    <section class="stack">
+      <h2>Content</h2>
+      <p>You retain rights to your uploads. You grant us a license to display them on this site.</p>
+    </section>
+
+    <section class="stack">
+      <h2>Changes</h2>
+      <p>We may update these terms. Continued use implies acceptance.</p>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <small>&copy; 2025 Studio Teknabu • <a href="privacy">Privacy</a> • <a href="terms" aria-current="page">Terms</a></small>
+  </footer>
+
+  <script type="module" src="src/js/app.js"></script>
+</body>
+</html>
